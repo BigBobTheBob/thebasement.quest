@@ -1,1 +1,52 @@
-<i>Why Hello There</i>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Basement</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {background-color: #060808;}
+
+h1   {
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+
+.zoom {
+  transition: transform .2s;
+  padding: 0px;
+  font-size: 15px;
+  text-align: center;
+  color: white;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10%;
+  padding: 1%;
+}
+
+</style>
+</head>
+<body>
+  <h1>The Basement</h1>
+    <div class="grid-container">
+        <div class="zoom">
+            <a href="something.html"><img src="wpid-goat_raymonds_450x300.jpg"></a>
+            <p>Something</p>
+        </div>
+      </div>
+
+</body>
+</html>
