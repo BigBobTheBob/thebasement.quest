@@ -437,7 +437,7 @@
     });
 
     function mint() {
-        myContract_write.buy(store.value).then(function (result) {result_span.innerHTML = `Transaction Hash : ${result.hash}`;});
+        myContract_write.buy({value: store.value}).then(function (result) {result_span.innerHTML = `Transaction Hash : ${result.hash}`;});
       
     }
     function show_balance() {
