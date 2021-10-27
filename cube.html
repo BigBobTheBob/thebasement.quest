@@ -1,0 +1,67 @@
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, inital-scale=0.5, maximum-scale=0.5, user-scalable=0">
+    <title>AnotherCube</title>
+    <link rel="stylesheet" type="text/css" href="./cube.css">
+    <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/7.5.1/math.min.js" integrity="sha512-6SHRAV8GhJ+3WvGPKQNsBpLj7J9QF9JFwH7nPSRLtH/OqFrlXRd54Z+QDgw7xj1f7dV8c50sKhZYr/xGPlMoiw==" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/three@0.133.1/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.133.1/examples/js/controls/OrbitControls.js"></script>
+    <script src="cube.js" type="module"></script>
+    
+    <div id="scene" >
+      <canvas id="rendercanvas" ></canvas>
+    </div>
+    
+    <div id="controls" >
+      <div id="sliders" >
+        <input type="range" min="0" max="360" value="180" step="1" class="slider" id="xy_slider" >
+        <input type="range" min="0" max="360" value="180" step="1" class="slider" id="xz_slider" >
+        <input type="range" min="0" max="360" value="180" step="1" class="slider" id="yz_slider" >
+        <input type="range" min="0" max="360" value="180" step="1" class="slider" id="xw_slider" >
+        <input type="range" min="0" max="360" value="180" step="1" class="slider" id="yw_slider" >
+        <input type="range" min="0" max="360" value="180" step="1" class="slider" id="zw_slider" >
+      </div>
+      <div id="buttos" >
+        <input type="checkbox" id="xy_checkbox" class="tickbox" >
+        <br>
+        <input type="checkbox" id="xz_checkbox" class="tickbox" >
+        <br>
+        <input type="checkbox" id="yz_checkbox" class="tickbox" >
+        <br>
+        <input type="checkbox" id="xw_checkbox" class="tickbox" >
+        <br>
+        <input type="checkbox" id="yw_checkbox" class="tickbox" >
+        <br>
+        <input type="checkbox" id="zw_checkbox" class="tickbox" >
+      </div>
+    </div>
+    <div id="settingDiv">
+      <input id="settingsToggle" type="checkbox" class="checkbox-hidden" >
+      <label for="settingsToggle" >
+        <p id="cog" class="material-icons" >settings</p>
+      </label>
+      <div id="settings">
+        <select name="cellSel" id="cellSel" >
+          <option value="cell5">5 Cell</option>
+          <option value="cell8" selected="selected">Hypercube</option>
+          <option value="cell16">16 Cell</option>
+          <option value="cell24">24 Cell</option>
+          <option value="cell120">120 Cell</option>
+          <option value="cell600">600 Cell</option>
+        </select>
+        <label for="cellSel" >Select hyperSolid</label>
+        <br>
+        <input type="checkbox" id="faceToggle" checked >
+        <label for="faceToggle">Show Faces</label>
+        <br>
+        <button type="button" id="resetButto" >Reset</button>
+      </div>
+    </div>
+  </body>
+</html>
