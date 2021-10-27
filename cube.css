@@ -1,0 +1,201 @@
+body{
+    margin: 0;
+  }
+  
+  canvas{
+    display: block;
+  }
+  
+  .checkbox-hidden {
+    display: none;
+  }
+  
+  #settingDiv{
+    position: fixed;
+    top: 15px;
+    left: 15px;
+  }
+  
+  #cog{
+    margin: 0px;
+    padding: 0px;
+    font-size: 68px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+            transition:         transform .5s ease-in-out;
+  }
+  
+  .checkbox-hidden:checked ~ label p{
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  
+  .checkbox-hidden:not(:checked) ~ label p{
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  
+  #settings{
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+            transition:         transform .5s ease-in-out;
+  }
+  
+  .checkbox-hidden:checked ~ div{
+    -webkit-transform: translate(0px,0px);
+            transform: translate(0px,0px);
+  }
+  
+  .checkbox-hidden:not(:checked) ~ div{
+    -webkit-transform: translate(-305px, 0px);
+            transform: translate(-305px, 0px);
+  }
+  
+  
+  #scene{
+    width: 100%;
+    height: 100%;
+  }
+  
+  @media (max-aspect-ratio: 1/1){
+  
+    #rendercanvas{
+      width: 100%;
+      height: calc(100% - 420px);
+    }
+  
+    #controls{
+      position: fixed;
+  
+      width: 100%;
+      height: 420px;
+      left:0px;
+      bottom:0px;
+      background:#ffffff;
+    }
+  
+    #sliders{
+      float: left;
+  
+      background: #ffffff;
+      
+      width: calc(100% - 75px);
+      height: 100%;
+    }
+  
+    #buttos{
+      float: right;
+      width: 75px;
+      height: 100%;
+    }
+  
+    .tickbox{
+      width: 40px;
+      height: 40px;
+      margin: 15px 15px;
+    }
+  
+    .slider{
+      position: static;
+      
+      margin: 15px 25px;
+  
+      -webkit-appearance: none;
+      appearance: none;
+      width: calc(100% - 30px);
+      height: 40px;
+      border-radius: 3px;
+      background: #d3d3d3;
+      outline: none;
+      opacity: 0.7;
+    }
+  
+    .slider::-webkit-slider-thumb{
+      -webkit-appearance: none;
+      appearance: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 20%;
+      background: #4caf50;
+      cursor: pointer;
+    }
+  
+    .slider::-moz-range-thumb{
+      width: 40px;
+      height: 40px;
+      border-radius: 20%;
+      background: #4caf50;
+      cursor: pointer;
+    }
+  
+  }
+  
+  @media (min-aspect-ratio: 1/1){
+  
+    #rendercanvas{
+      width: 100%;
+      height: 100%;
+    }
+  
+    #controls{
+      position: fixed;
+  
+      width: 420px;
+      right:15px;
+      top:15px;
+    }
+  
+    #sliders{
+      float: left;
+  
+      width: calc(100% - 40px);
+      height: 100%;
+    }
+  
+    #buttos{
+      float: right;
+      width: 40px;
+      height: 100%;
+    }
+  
+    .tickbox{
+      width: 25px;
+      height: 25px;
+      margin: 8px 5px;
+    }
+  
+    .slider{
+      position: static;
+      
+      margin: 8px 10px;
+  
+      -webkit-appearance: none;
+      appearance: none;
+      width: calc(100% - 15px);
+      height: 25px;
+      border-radius: 3px;
+      background: #d3d3d3;
+      outline: none;
+      opacity: 1.0;
+    }
+  
+    .slider::-webkit-slider-thumb{
+      -webkit-appearance: none;
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 20%;
+      background: #4caf50;
+      cursor: pointer;
+    }
+  
+    .slider::-moz-range-thumb{
+      width: 25px;
+      height: 25px;
+      border-radius: 20%;
+      background: #4caf50;
+      cursor: pointer;
+    }
+  }
